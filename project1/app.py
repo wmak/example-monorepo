@@ -7,7 +7,7 @@ from sentry_sdk.integrations.flask import FlaskIntegration
 logger = logging.getLogger(__name__)
 
 sentry_sdk.init(
-    dsn="http://09a8352435f846a7b59fc73fe9c18c63@dev.getsentry.net:8000/9",
+    dsn="https://ca7b2323573746308d10b810c163b32a@sentry.io/1883002",
 
     environment="this environment",
     integrations=[FlaskIntegration()]
