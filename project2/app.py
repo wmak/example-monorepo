@@ -7,9 +7,10 @@ from sentry_sdk.integrations.flask import FlaskIntegration
 logger = logging.getLogger(__name__)
 
 sentry_sdk.init(
-    dsn="https://3feff6c0e20a4b0b894da2e20d885eb6@sentry.io/1883004",
+    dsn="http://9cd0906bd5b34b1692dd85fb79bef78b@dev.getsentry.net:8000/12",
 
-    environment="this environment",
+    environment="production",
+    release="fb03c3426de27e10a9e498de502bfa886ba663e3",
     integrations=[FlaskIntegration()]
 )
 
@@ -32,7 +33,7 @@ def trigger_error():
 
 @app.route('/debug1')
 def trigger_error1():
-    trigger_inner_error()
+    1/0
 
 
 def trigger_inner_error():
